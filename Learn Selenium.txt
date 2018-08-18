@@ -1,0 +1,15 @@
+OOP’s concept – Class, Objects Polymorphism, Inheritance, and Encapsulation.
+
+Java Programming essentials- Object Instances, method overloading/overriding concepts and packages.
+
+Control Statements – While, do-While, Switch, If statements – This will help us in writing the scripts for multiple scenario statements and decision-making scenarios.
+
+Looping statements – This will help us in scenarios like, iterating through a large table to find a record that you want and Running the same test for a multiple number of times.
+
+Arrays Concepts – This will help us in having some set of data’s of the same type in a static way.
+
+Threads and Multi threading Concepts – This will help us in making run our scripts in different threads that will help us in achieving better performance.
+
+Java Collections Framework – Array Lists and HashMaps – This will help us in maintaining a collection of data’s. Particularly useful for scenarios where you need to compare the data from Web app UI with the DB. [OR] From UI to another UI
+
+File Streams – This will be helpful in the externalization of data through CSV, Excel or Java Properties file.

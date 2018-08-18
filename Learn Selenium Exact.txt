@@ -1,0 +1,14 @@
+1) If-else
+2) Switch
+3) For Loop
+4) While Loop
+5) Do-while Loop
+6) Break
+7) Continue
+8) For-each Loop
+
+1) Constructor
+2) Inheritance
+3) Method Overloading
+4) Method Overriding
+5) 

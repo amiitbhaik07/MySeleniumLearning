@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [Suite]" parallel="true">
+  <test name="Test(failed)" parallel="true">
+    <classes>
+      <class name="learnSelenium.LaunchBrowser">
+        <methods>
+          <include name="runBrowser"/>
+        </methods>
+      </class> <!-- learnSelenium.LaunchBrowser -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

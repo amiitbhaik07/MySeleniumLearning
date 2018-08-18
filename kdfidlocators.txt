@@ -1,0 +1,109 @@
+LocatorBuilders.add('abhaik_xpath', function(e) {
+  var idAttrName = "id";
+  var nameAttrName = "name";
+  var typeAttrName = "type";
+  
+  var idAttr = e.getAttribute(idAttrName);
+  var nameAttr = e.getAttribute(nameAttrName);
+  var typeAttr = e.getAttribute(typeAttrName);
+  
+  var returnVal = null;
+  
+  if(idAttr)
+  {
+    returnVal = "//*[@"+idAttrName+"='"+idAttr+"'";
+    if(nameAttr)
+    {
+      returnVal = returnVal + " and @"+nameAttrName+"='"+nameAttr+"'";
+    }
+    if(typeAttr)
+    {
+      returnVal = returnVal + " and @"+typeAttrName+"='"+typeAttr+"'";
+    }
+    else
+      returnVal = returnVal + "]";
+  }
+  
+  
+  
+  
+}
+
+
+
+
+
+
+
+LocatorBuilders.add('kdfid:value', function(e) {
+
+    var kdfidAttrName = "kdfid";
+    var kdfAppAttrName = "kdfapp";
+    var kdfPageAttrName = "kdfpage";
+
+    var kdfidAttr = e.getAttribute(kdfidAttrName);
+    var kdfApp = e.getAttribute(kdfAppAttrName);
+    var kdfPage = e.getAttribute(kdfPageAttrName);
+
+
+    var returnVal = null;
+
+    if (kdfidAttr) {
+        returnVal = "xpath=//*" + "[@" + kdfidAttrName + "='" + kdfidAttr;
+        if (kdfApp) {
+            returnVal = returnVal + "' and @" + kdfAppAttrName + "='" + kdfApp;
+        }
+        if (kdfPage) {
+            returnVal = returnVal + "' and @" + kdfPageAttrName + "='" + kdfPage;
+        }
+
+        if ((e.tagName.toUpperCase() == "INPUT") && (e.parentNode.tagName.toUpperCase() == "LABEL")) {
+            returnVal = "xpath=//*[@parent='' or @" + kdfidAttrName + "='" + kdfidAttr + "' and @" + kdfAppAttrName + "='" + kdfApp + "' and @" + kdfPageAttrName + "='" + kdfPage + "']";
+
+        } else {
+            returnVal = returnVal + "']";
+        }
+    }
+
+    if (returnVal == null) {
+        if (e.tagName.toUpperCase() == "SPAN") {
+            kdfidAttr = e.parentNode.getAttribute(kdfidAttrName);
+            kdfApp = e.parentNode.getAttribute(kdfAppAttrName);
+            kdfPage = e.parentNode.getAttribute(kdfPageAttrName);
+
+            if (kdfidAttr) {
+                returnVal = "xpath=//*" + "[@" + kdfidAttrName + "='" + kdfidAttr;
+                if (kdfApp) {
+                    returnVal = returnVal + "' and @" + kdfAppAttrName + "='" + kdfApp;
+                }
+                if (kdfPage) {
+                    returnVal = returnVal + "' and @" + kdfPageAttrName + "='" + kdfPage;
+                }
+                returnVal = returnVal + "']/span";
+            }
+        } else if (e.tagName.toUpperCase() == "IMG") {
+
+            kdfidAttr = e.parentNode.getAttribute(kdfidAttrName);
+            kdfApp = e.parentNode.getAttribute(kdfAppAttrName);
+            kdfPage = e.parentNode.getAttribute(kdfPageAttrName);
+
+            if (kdfidAttr) {
+                returnVal = "xpath=//*" + "[@" + kdfidAttrName + "='" + kdfidAttr;
+                if (kdfApp) {
+                    returnVal = returnVal + "' and @" + kdfAppAttrName + "='" + kdfApp;
+                }
+                if (kdfPage) {
+                    returnVal = returnVal + "' and @" + kdfPageAttrName + "='" + kdfPage;
+                }
+                returnVal = returnVal + "']/img";
+            }
+        }
+    }
+
+
+    //alert("returning: " + returnVal);		
+
+    return (returnVal);
+
+
+});
