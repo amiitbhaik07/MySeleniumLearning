@@ -31,6 +31,8 @@
 	</build>
 
 	<dependencies>
+
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -73,7 +75,7 @@
 			<artifactId>jsonassert</artifactId>
 			<version>1.5.0</version>
 		</dependency>
-		
+
 		<!-- Dependency for JDBC -->
 		<dependency>
 			<groupId>com.oracle</groupId>
@@ -82,7 +84,7 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/ojdbc14.jar</systemPath>
 		</dependency>
-		
+
 		<!-- Dependencies for Excel Interaction -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -109,11 +111,8 @@
 			<artifactId>ooxml-schemas</artifactId>
 			<version>1.1</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>openxml4j</artifactId>
-			<version>1.0-beta</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>openxml4j</artifactId> 
+			<version>1.0-beta</version> </dependency> -->
 
 
 
@@ -152,5 +151,30 @@
 
 
 
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-html</artifactId>
+			<version>0.2.3</version>
+		</dependency>
 	</dependencies>
 </project>
